@@ -1,6 +1,7 @@
-<ul>
-  <li *ngFor="let item of items | async">
-    {{ item.sender }} - {{item.body}}
-  </li>
-</ul>
 <app-message-form (formSubmit)="add($event)"></app-message-form>
+<div>
+    <article *ngFor="let item of items | async">
+        <div class="message__author">{{ item.sender }}</div>
+        <div [innerHTML]="item.body|MarkdownToHtml"></div>
+    </article>
+</div>

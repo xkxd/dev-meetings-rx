@@ -6,12 +6,14 @@ import {environment} from '../environments/environment';
 import {AngularFirestore} from 'angularfire2/firestore';
 import {MessageFormComponent} from './message-form/message-form.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MarkdownToHtmlModule} from 'markdown-to-html-pipe';
 
 @NgModule({
     imports: [
         BrowserModule,
         AngularFireModule.initializeApp(environment.firebase),
         FormsModule,
+        MarkdownToHtmlModule,
         ReactiveFormsModule
     ],
     providers: [AngularFirestore],
