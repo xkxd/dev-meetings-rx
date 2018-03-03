@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { AngularFirestore} from 'angularfire2/firestore';
+import { MessageFormComponent } from './message-form/message-form.component';
 
 @NgModule({
 	imports: [
@@ -11,7 +12,7 @@ import { AngularFirestore} from 'angularfire2/firestore';
 		AngularFireModule.initializeApp(environment.firebase)
 	],
 	providers: [AngularFirestore],
-	declarations: [ AppComponent ],
+	declarations: [ AppComponent, MessageFormComponent ],
 	bootstrap: [ AppComponent ]
 })
 export class AppModule {}
