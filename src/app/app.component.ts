@@ -15,4 +15,8 @@ export class AppComponent {
 	constructor(db: AngularFirestore) {
 		this.items = db.collection('messages').valueChanges();
 	}
+
+    add(stuff) {
+	    console.log(stuff)
+    }
 }

@@ -3,4 +3,4 @@
     {{ item.sender }} - {{item.body}}
   </li>
 </ul>
-<app-message-form></app-message-form>
+<app-message-form (formSubmit)="add($event)"></app-message-form>
