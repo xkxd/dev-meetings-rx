@@ -1,4 +1,4 @@
-<form [formGroup]="form" (ngSubmit)="formSubmitSubject.next()">
+<form [formGroup]="form" (ngSubmit)="formSubmitSubject.next()" class="form">
     <input type="text" id="senderInput" placeholder="Username" [formControlName]="'sender'">
     <textarea class="form__body" type="text" id="messageInput" placeholder="Message body" [formControlName]="'body'"></textarea>
     <button type="submit" id="submitButton" [disabled]="form.invalid">Send</button>

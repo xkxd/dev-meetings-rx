@@ -1,7 +1,10 @@
-<app-message-form (formSubmit)="add($event)"></app-message-form>
-<div>
-    <article *ngFor="let item of items | async">
-        <div class="message__author">{{ item.sender }}</div>
-        <div [innerHTML]="item.body|MarkdownToHtml"></div>
-    </article>
+<div class="app">
+    <h1>Nasza rozmowa</h1>
+    <app-message-form (formSubmit)="add($event)"></app-message-form>
+    <div>
+        <article *ngFor="let item of items | async">
+            <div class="message__author">{{ item.sender }}</div>
+            <div [innerHTML]="item.body|MarkdownToHtml"></div>
+        </article>
+    </div>
 </div>

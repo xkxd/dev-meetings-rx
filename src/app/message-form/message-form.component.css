@@ -1,4 +1,6 @@
-
+.form {
+    padding-bottom: 30px;
+}
 .form__body {
     display:block;
     width: 400px;
