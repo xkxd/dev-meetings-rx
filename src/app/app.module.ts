@@ -7,6 +7,7 @@ import {AngularFirestore} from 'angularfire2/firestore';
 import {MessageFormComponent} from './message-form/message-form.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MarkdownToHtmlModule} from 'markdown-to-html-pipe';
+import { SideBarComponent } from './side-bar/side-bar.component';
 
 @NgModule({
     imports: [
@@ -17,7 +18,7 @@ import {MarkdownToHtmlModule} from 'markdown-to-html-pipe';
         ReactiveFormsModule
     ],
     providers: [AngularFirestore],
-    declarations: [AppComponent, MessageFormComponent],
+    declarations: [AppComponent, MessageFormComponent, SideBarComponent],
     bootstrap: [AppComponent]
 })
 export class AppModule {

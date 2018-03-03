@@ -7,3 +7,11 @@
 .message__author {
     font-weight: bold;
 }
+
+article:first-of-type {
+    display: flex;
+    color: red;
+    font-size: 40px;
+    padding: 20px;
+    border: 1px solid black;
+}
