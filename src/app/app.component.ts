@@ -13,10 +13,14 @@ export class AppComponent {
 	items: Observable<any[]>;
 
 	constructor(db: AngularFirestore) {
+	    this.db = db;
 		this.items = db.collection('messages').valueChanges();
 	}
 
     add(stuff) {
-	    console.log(stuff)
+        this.db.collection('messages').add({
+            ...stuff,
+            timestamp: Date.now()
+        });
     }
 }
