@@ -1,5 +1,5 @@
-<form>
-    <input type="text" id="userInput" placeholder="Username">
-    <input type="text" id="messageInput" placeholder="Message body">
+<form [formGroup]="form" (ngSubmit)="formSubmitSubject.next()">
+    <input type="text" id="senderInput" placeholder="Username" [formControlName]="'sender'">
+    <input type="text" id="messageInput" placeholder="Message body" [formControlName]="'body'">
     <button type="submit" id="submitButton">Send</button>
 </form>
