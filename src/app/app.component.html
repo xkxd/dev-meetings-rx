@@ -1,5 +1,7 @@
 <div class="app">
-    <h1>Nasza rozmowa</h1>
+    <h1>
+        <marquee behavior="" direction="">Nasza rozmowa</marquee>
+    </h1>
     <app-message-form (formSubmit)="add($event)"></app-message-form>
     <div>
         <article *ngFor="let item of items | async">
