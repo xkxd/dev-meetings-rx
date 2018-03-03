@@ -11,10 +11,11 @@ import {Observable} from 'rxjs/Observable';
 export class AppComponent {
 	title = 'app';
 	items: Observable<any[]>;
+	db: AngularFirestore;
 
 	constructor(db: AngularFirestore) {
 	    this.db = db;
-		this.items = db.collection('messages').valueChanges();
+		this.items = db.collection('messages', ref => ref.orderBy('timestamp')).valueChanges();
 	}
 
     add(stuff) {
